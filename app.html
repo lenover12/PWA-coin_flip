@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flipper PWA</title>
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <h1>Coin Flipper</h1>
+    <button onclick="flipCoin()">Flip Coin</button>
+    <p id="result"></p>
+
+    <script>
+        function flipCoin() {
+            const resultElement = document.getElementById('result');
+            const randomResult = Math.random() < 0.5 ? 'Heads' : 'Tails';
+            resultElement.textContent = `Result: ${randomResult}`;
+        }
+    </script>
+</body>
+</html>
